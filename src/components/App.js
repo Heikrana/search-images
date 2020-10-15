@@ -11,8 +11,13 @@ class App extends React.Component {
 
    onSearchSubmit = (term) => {
       Unsplash.get("/search/photos", {
-         params: {query: term}
+         params: {
+            query: term,
+            per_page: 25,
+            order_by: "popular"
+         }
       }).then((response) => {
+         console.log(response);
          this.setState({images: response.data.results});
       }).catch((err) => {
          console.log(err);
@@ -23,7 +28,7 @@ class App extends React.Component {
       return (
          <div className="ui container" style={{marginTop: "1rem"}}>
             <SearchBar onSubmit={this.onSearchSubmit} />
-            <ImageList images={this.state.images}/>
+            <ImageList images={this.state.images} />
          </div>
       );
    }
