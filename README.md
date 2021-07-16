@@ -1,6 +1,6 @@
 # Search Images
 This is a tiny project created by me for learning purposes.
-Checkout the website at https://klofaes.github.io/search-images/
+Checkout the website at [search-images](https://heikrana.github.io/search-images/)
 
 ## What it does...
 You can search images by keywords, Unspash.com's API is used to provide search results and this whole program is created with ReactJS.
